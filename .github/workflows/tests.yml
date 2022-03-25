@@ -34,7 +34,9 @@ jobs:
 
       #run composer
       - name: Composer install
-        run: composer install
+        run: |
+          composer install
+          composer update ${{ matrix.composer-options }}
 
       #run tests
       - name: Run test suite
