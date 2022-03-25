@@ -14,12 +14,9 @@ jobs:
       #for each of the following versions of PHP, with and without --prefer-lowest
       matrix:
         php-versions: ['5.5', '5.6', '7.0', '7.1', '7.2', '7.3', '7.4', '8.0']
-        composer-options: ['', '--prefer-lowest']
 
     #set the name for each job
-    name: PHP ${{ matrix.php-versions }} ${{ matrix.composer-options }}
-    env:
-      COMPOSER_OPTS: ${{ matrix.composer-options }}
+    name: PHP ${{ matrix.php-versions }}
     steps:
       #sets up the correct version of PHP with necessary config options
       - name: Setup PHP
@@ -34,9 +31,7 @@ jobs:
 
       #run composer
       - name: Composer install
-        run: |
-          composer install
-          composer update ${{ matrix.composer-options }}
+        run: composer install
 
       #run tests
       - name: Run test suite
