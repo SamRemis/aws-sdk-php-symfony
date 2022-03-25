@@ -32,7 +32,7 @@ jobs:
 
       #run composer
       - name: Composer install
-        run: composer install ${{ matrix.composer-options }}
+        run: composer update ${{ matrix.composer-options }}
 
       #run tests
       - name: Run test suite
