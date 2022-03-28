@@ -16,7 +16,7 @@ class AppKernel extends Kernel
         parent::__construct($env, $debug);
     }
 
-    public function registerBundles() : iterable
+    public function registerBundles()
     {
         return [
             new FrameworkBundle(),
