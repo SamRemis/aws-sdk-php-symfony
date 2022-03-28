@@ -10,7 +10,7 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class ConfigurationTest extends TestCase
 {
-    public function setUp() : void
+    public function setUp()
     {
         (new Filesystem)
             ->remove(implode(DIRECTORY_SEPARATOR, [

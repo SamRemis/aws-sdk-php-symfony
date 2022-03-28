@@ -24,7 +24,7 @@ class AwsExtensionTest extends TestCase
      */
     protected $container;
 
-    public function setUp() : void
+    public function setUp()
     {
         $this->kernel = new AppKernel('test', true);
         $this->kernel->boot();
