@@ -1,4 +1,13 @@
 # CHANGELOG
+## 2.5.0 - 2022-05-26
+
+* Inherit AWS_MERGE_CONFIG value from .env files
+
+## 2.4.0 - 2022-04-13
+
+* Upgrade minimum version of PHPUnit
+* Mark client service definition as lazy
+
 ## 2.3.0 - 2022-03-29
 
 * Added support for Symfony ~6.0
